@@ -463,9 +463,9 @@ void setUltrasonicMode(bool mode) {
 
 void sendUltrasonic() {
   gpio_write(gpio_pin[trigPin], LOW);
-  up_udelay(2);
+  up_mdelay(2);
   gpio_write(gpio_pin[trigPin], HIGH);
-  up_udelay(10);
+  up_mdelay(10);
   gpio_write(gpio_pin[trigPin], LOW);
 
   float value = 500 / 29.0 / 2.0;
@@ -588,6 +588,5 @@ int main(int argc, char *argv[])
 	return 0;
 
 }
-
 
 
